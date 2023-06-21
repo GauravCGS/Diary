@@ -1,0 +1,219 @@
+$postBlue: #3b5998;
+$postBlack: #000000;
+$postWhite: #ffffff;
+$postGrey: #cccccc;
+$postRed: #ff0000;
+
+.App {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+}
+
+.postList {
+  list-style-type: none;
+
+  & > li {
+    line-height: 2rem;
+    margin-bottom: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    & a {
+      text-decoration: none;
+      color: $postBlack;
+
+      &:hover {
+        color: $postBlue;
+      }
+    }
+
+    & div {
+      color: $postGrey;
+    }
+
+    .postHeadHeader {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    span {
+      cursor: pointer;
+      border: none;
+      background: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $postBlue;
+      }
+    }
+  }
+}
+
+.diaryPost {
+  & > h2,
+  div,
+  p {
+    line-height: 2rem;
+  }
+
+  div {
+    color: $postBlue;
+  }
+}
+
+.postForm {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
+  & > div {
+    margin: 0 auto 10px auto;
+    color: $postBlue;
+  }
+
+  & > input {
+    margin-bottom: 10px;
+    height: 32px;
+    padding: 8px;
+    font-size: 14pt;
+    color: $postBlack;
+    background-color: $postWhite;
+    border: 1px solid $postGrey;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: $postBlue;
+    }
+
+    &::before {
+      content: "*";
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      color: $postRed;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  & > p {
+    color: $postRed;
+  }
+
+  & > textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 14pt;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+    color: $postBlack;
+    background-color: $postWhite;
+    border: 1px solid $postGrey;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: $postBlue;
+    }
+  }
+
+  & > button {
+    background-color: $postBlue;
+    height: 35px;
+    color: $postWhite;
+    border-radius: 24px;
+    font-size: 16pt;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($postBlue, 10%);
+    }
+  }
+}
+
+.loginForm {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translate(-50%, -52%);
+  }
+
+  & > input {
+    margin-bottom: 10px;
+    height: 32px;
+    padding: 8px;
+    font-size: 14pt;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: $postBlue;
+    }
+  }
+
+  .loginSignUpToggle {
+    height: 32px;
+    background-color: $postBlue;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    font-size: 14pt;
+    cursor: pointer;
+    color: $postWhite;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($postBlue, 10%);
+    }
+  }
+
+  h3 {
+    margin: 0 auto 25px auto;
+  }
+
+  .submit {
+    height: 32px;
+    background-color: $postBlue;
+    color: $postWhite;
+    font-size: 14pt;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($postBlue, 10%);
+    }
+  }
+}
